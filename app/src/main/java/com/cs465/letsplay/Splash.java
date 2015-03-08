@@ -1,17 +1,32 @@
 package com.cs465.letsplay;
 
-import android.support.v7.app.ActionBarActivity;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class Splash extends ActionBarActivity {
+
+public class Splash extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        TimerTask task = new TimerTask() {
+            @Override
+            public void run() {
+                finish();
+                startActivity(new Intent(Splash.this, MainActivity.class));
+            }
+        };
+        Timer opening = new Timer();
+        opening.schedule(task,2000);
     }
 
 
