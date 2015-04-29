@@ -1,4 +1,4 @@
-package com.cs465.letsplay;
+package com.cs465.letsplay.ActivityClass;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.cs465.letsplay.R;
 
 
 public class Splash extends Activity {

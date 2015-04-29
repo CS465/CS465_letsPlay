@@ -7,9 +7,9 @@
     <string name="drawer_close">close</string>
     <string-array name="menu">
         <item >Profile</item>
-        <item >Contacts</item>
+        <item >Sport Mates</item>
         <item >My Events</item>
-        <item >Look Around</item>
+        <item >Find Events</item>
         <item >Setting</item>
     </string-array>
 </resources>

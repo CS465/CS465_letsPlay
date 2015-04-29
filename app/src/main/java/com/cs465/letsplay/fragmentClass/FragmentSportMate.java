@@ -1,4 +1,4 @@
-package com.cs465.letsplay;
+package com.cs465.letsplay.fragmentClass;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,12 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.cs465.letsplay.R;
+
 /**
  * Created by kevin on 3/7/2015.
  */
-public class FragmentContacts extends Fragment
+public class FragmentSportMate extends Fragment
 {
-    public FragmentContacts()
+    public FragmentSportMate()
     {
         // Required empty public constructor
     }
@@ -19,7 +21,7 @@ public class FragmentContacts extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        View v = inflater.inflate(R.layout.fragment_contact, container, false);
+        View v = inflater.inflate(R.layout.fragment_sport_mate, container, false);
         return v;
     }
 }

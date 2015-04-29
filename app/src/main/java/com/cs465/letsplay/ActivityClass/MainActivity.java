@@ -1,11 +1,10 @@
-package com.cs465.letsplay;
+package com.cs465.letsplay.ActivityClass;
 
 /**
  * Created by kevin on 3/7/2015.
  */
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
@@ -18,6 +17,13 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.cs465.letsplay.R;
+import com.cs465.letsplay.fragmentClass.FragmentFindEvent;
+import com.cs465.letsplay.fragmentClass.FragmentMyEvent;
+import com.cs465.letsplay.fragmentClass.FragmentProfile;
+import com.cs465.letsplay.fragmentClass.FragmentSetting;
+import com.cs465.letsplay.fragmentClass.FragmentSportMate;
 
 // MainActivity Class
 public class MainActivity extends ActionBarActivity  implements OnItemClickListener
@@ -105,15 +111,15 @@ public class MainActivity extends ActionBarActivity  implements OnItemClickListe
                 fTransaction.commit();
                 break;
             case 1:
-                fTransaction.replace(R.id.mainContent, new FragmentContacts());
+                fTransaction.replace(R.id.mainContent, new FragmentSportMate());
                 fTransaction.commit();
                 break;
             case 2:
-                fTransaction.replace(R.id.mainContent, new FragmentEvent());
+                fTransaction.replace(R.id.mainContent, new FragmentMyEvent());
                 fTransaction.commit();
                 break;
             case 3:
-                fTransaction.replace(R.id.mainContent, new FragmentSearch());
+                fTransaction.replace(R.id.mainContent, new FragmentFindEvent());
                 fTransaction.commit();
                 break;
             case 4:

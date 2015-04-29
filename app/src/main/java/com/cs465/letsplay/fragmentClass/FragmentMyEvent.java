@@ -1,8 +1,4 @@
-package com.cs465.letsplay;
-
-/**
- * Created by kevin on 3/7/2015.
- */
+package com.cs465.letsplay.fragmentClass;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,10 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentProfile extends Fragment
-{
+import com.cs465.letsplay.R;
 
-    public FragmentProfile()
+/**
+ * Created by kevin on 3/7/2015.
+ */
+public class FragmentMyEvent extends Fragment
+{
+    public FragmentMyEvent()
     {
         // Required empty public constructor
     }
@@ -21,7 +21,7 @@ public class FragmentProfile extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        View v = inflater.inflate(R.layout.fragment_profile, container, false);
+        View v = inflater.inflate(R.layout.fragment_my_event, container, false);
         return v;
     }
 }

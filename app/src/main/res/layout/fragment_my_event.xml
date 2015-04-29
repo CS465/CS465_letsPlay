@@ -5,10 +5,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Profile"
-        android:id="@+id/PF_txtTitle"
+        android:text="My Event"
+        android:id="@+id/ME_txtTitle"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="81dp" />
+        android:layout_marginTop="104dp" />
 </RelativeLayout>
-
