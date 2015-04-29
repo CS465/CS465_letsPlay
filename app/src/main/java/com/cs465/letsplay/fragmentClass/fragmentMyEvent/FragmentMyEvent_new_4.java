@@ -1,4 +1,4 @@
-package com.cs465.letsplay.fragmentClass;
+package com.cs465.letsplay.fragmentClass.fragmentMyEvent;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import com.cs465.letsplay.R;
 
 /**
- * Created by kevin on 3/7/2015.
+ * Created by kevin on 4/28/2015.
  */
-public class FragmentFindEvent extends Fragment
+public class FragmentMyEvent_new_4 extends Fragment
 {
-    public FragmentFindEvent()
+    public FragmentMyEvent_new_4()
     {
         // Required empty public constructor
     }
@@ -21,7 +21,7 @@ public class FragmentFindEvent extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        View v = inflater.inflate(R.layout.fragment_find_events_list, container, false);
+        View v = inflater.inflate(R.layout.fragment_my_event_new_4_info, container, false);
         return v;
     }
 }

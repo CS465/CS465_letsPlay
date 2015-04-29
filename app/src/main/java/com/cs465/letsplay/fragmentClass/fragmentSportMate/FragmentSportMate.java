@@ -1,4 +1,4 @@
-package com.cs465.letsplay.fragmentClass;
+package com.cs465.letsplay.fragmentClass.fragmentSportMate;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,9 +11,9 @@ import com.cs465.letsplay.R;
 /**
  * Created by kevin on 3/7/2015.
  */
-public class FragmentSetting extends Fragment
+public class FragmentSportMate extends Fragment
 {
-    public FragmentSetting()
+    public FragmentSportMate()
     {
         // Required empty public constructor
     }
@@ -21,7 +21,7 @@ public class FragmentSetting extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        View v = inflater.inflate(R.layout.fragment_setting, container, false);
+        View v = inflater.inflate(R.layout.fragment_sport_mate, container, false);
         return v;
     }
 }

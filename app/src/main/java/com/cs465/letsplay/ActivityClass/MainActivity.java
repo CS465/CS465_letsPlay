@@ -19,11 +19,11 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cs465.letsplay.R;
-import com.cs465.letsplay.fragmentClass.FragmentFindEvent;
-import com.cs465.letsplay.fragmentClass.FragmentMyEvent;
-import com.cs465.letsplay.fragmentClass.FragmentProfile;
-import com.cs465.letsplay.fragmentClass.FragmentSetting;
-import com.cs465.letsplay.fragmentClass.FragmentSportMate;
+import com.cs465.letsplay.fragmentClass.fragmentFindEvent.FragmentFindEvent;
+import com.cs465.letsplay.fragmentClass.fragmentMyEvent.FragmentMyEvent;
+import com.cs465.letsplay.fragmentClass.fragmentProfile.FragmentProfile;
+import com.cs465.letsplay.fragmentClass.fragmentSetting.FragmentSetting;
+import com.cs465.letsplay.fragmentClass.fragmentSportMate.FragmentSportMate;
 
 // MainActivity Class
 public class MainActivity extends ActionBarActivity  implements OnItemClickListener
