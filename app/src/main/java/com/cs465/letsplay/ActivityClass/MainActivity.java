@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.cs465.letsplay.R;
+import com.cs465.letsplay.fragmentClass.FragmentDBTest;
 import com.cs465.letsplay.fragmentClass.fragmentFindEvent.FragmentFindEvent;
 import com.cs465.letsplay.fragmentClass.fragmentMyEvent.FragmentMyEvent;
 import com.cs465.letsplay.fragmentClass.fragmentProfile.FragmentProfile;
@@ -126,6 +127,9 @@ public class MainActivity extends ActionBarActivity  implements OnItemClickListe
                 fTransaction.replace(R.id.mainContent, new FragmentSetting());
                 fTransaction.commit();
                 break;
+            case 5:
+                fTransaction.replace(R.id.mainContent, new FragmentDBTest());
+                fTransaction.commit();
             default:
                 break;
 

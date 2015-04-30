@@ -11,5 +11,7 @@
         <item >My Events</item>
         <item >Find Events</item>
         <item >Setting</item>
+        <item >DB Testing</item>
     </string-array>
+
 </resources>
