@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.cs465.letsplay.R;
 
@@ -13,7 +14,7 @@ import com.cs465.letsplay.R;
  */
 public class FragmentSetting_sport extends Fragment
 {
-
+    private Button btnSet;
     public FragmentSetting_sport()
     {
         // Required empty public constructor
@@ -23,6 +24,15 @@ public class FragmentSetting_sport extends Fragment
                              Bundle savedInstanceState)
     {
         View v = inflater.inflate(R.layout.fragment_setting_favorite_sport, container, false);
+        btnSet = (Button)v.findViewById(R.id.SFS_btnSet);
+        btnSet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                //todo the db call here
+            }
+        });
+
         return v;
     }
 }
