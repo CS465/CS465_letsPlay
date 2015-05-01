@@ -6,7 +6,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="test Layout"
-        android:id="@+id/T_title"
+        android:id="@+id/T_result"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="87dp" />
@@ -16,7 +16,38 @@
         android:layout_height="wrap_content"
         android:text="submit"
         android:id="@+id/T_btnSubmit"
+        android:layout_marginBottom="83dp"
         android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/editText"
+        android:layout_toStartOf="@+id/editText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:hint="User Name"
+        android:layout_below="@+id/T_result"
+        android:layout_alignLeft="@+id/T_result"
+        android:layout_alignStart="@+id/T_result"
+        android:layout_marginTop="90dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editUserId"
+        android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="94dp" />
+        android:layout_marginTop="60dp"
+        android:hint="User ID"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show"
+        android:id="@+id/T_btnshow"
+        android:layout_alignTop="@+id/T_btnSubmit"
+        android:layout_alignLeft="@+id/editUserId"
+        android:layout_alignStart="@+id/editUserId" />
+
+
 </RelativeLayout>
