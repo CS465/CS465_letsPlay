@@ -7,8 +7,34 @@
         android:layout_height="wrap_content"
         android:text="Setting"
         android:id="@+id/ST_txtTitle"
+        android:layout_marginTop="49dp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SET_imgPersonalInfo"
+        android:layout_below="@+id/ST_txtTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="99dp" />
+        android:layout_marginTop="61dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SET_imgSport"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SET_imgTime"
+        android:layout_below="@+id/SET_imgSport"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:src="@mipmap/ic_launcher"/>
 </RelativeLayout>
 
