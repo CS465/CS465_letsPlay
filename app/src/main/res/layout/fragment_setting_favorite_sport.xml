@@ -7,7 +7,16 @@
         android:layout_height="wrap_content"
         android:text="Setting Favorite Sport"
         android:id="@+id/SFS_txtTitle"
+        android:layout_marginTop="52dp"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set"
+        android:id="@+id/SFS_btnSet"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="114dp" />
+        android:layout_marginBottom="49dp" />
 </RelativeLayout>
