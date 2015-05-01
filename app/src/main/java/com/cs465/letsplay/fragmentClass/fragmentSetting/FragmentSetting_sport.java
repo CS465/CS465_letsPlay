@@ -1,4 +1,4 @@
-package com.cs465.letsplay.fragmentClass.fragmentProfile;
+package com.cs465.letsplay.fragmentClass.fragmentSetting;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,10 +11,10 @@ import com.cs465.letsplay.R;
 /**
  * Created by kevin on 4/28/2015.
  */
-public class FragmentProfile_info extends Fragment
+public class FragmentSetting_sport extends Fragment
 {
 
-    public FragmentProfile_info()
+    public FragmentSetting_sport()
     {
         // Required empty public constructor
     }
@@ -22,7 +22,7 @@ public class FragmentProfile_info extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        View v = inflater.inflate(R.layout.fragment_profile_personal_info, container, false);
+        View v = inflater.inflate(R.layout.fragment_setting_favorite_sport, container, false);
         return v;
     }
 }

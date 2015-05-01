@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/SPI_txtName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="43dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/SPI_editName"
+        android:hint="Your name"
+        android:layout_below="@+id/SPI_txtName"
+        android:layout_alignLeft="@+id/SPI_txtName"
+        android:layout_alignStart="@+id/SPI_txtName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:id="@+id/SPI_txtAge"
+        android:layout_below="@+id/SPI_editName"
+        android:layout_alignLeft="@+id/SPI_editName"
+        android:layout_alignStart="@+id/SPI_editName"
+        android:layout_marginTop="49dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="3"
+        android:id="@+id/SPI_editAge"
+        android:layout_below="@+id/SPI_txtAge"
+        android:layout_alignLeft="@+id/SPI_txtAge"
+        android:layout_alignStart="@+id/SPI_txtAge"
+        android:layout_marginTop="55dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender"
+        android:id="@+id/SPI_txtGender"
+        android:layout_alignTop="@+id/SPI_txtAge"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="150sp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SPI_spinnerGender"
+        android:layout_alignTop="@+id/SPI_editAge"
+        android:layout_alignLeft="@+id/SPI_txtGender"
+        android:layout_alignStart="@+id/SPI_txtGender"
+        android:spinnerMode="dropdown"
+        android:dropDownWidth="20sp"
+        android:entries="@array/SPI_gender"
+        android:prompt ="@string/SPI_genderPrompt"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:id="@+id/SPI_txtLocation"
+        android:layout_above="@+id/SPI_editLocation"
+        android:layout_alignLeft="@+id/SPI_editAge"
+        android:layout_alignStart="@+id/SPI_editAge" />
+
+    <WebView
+        android:layout_width="300sp"
+        android:layout_height="150sp"
+        android:id="@+id/SPI_webViewMap"
+        android:layout_above="@+id/SPI_btnEdit"
+        android:layout_alignLeft="@+id/SPI_txtLocation"
+        android:layout_alignStart="@+id/SPI_txtLocation" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:id="@+id/SPI_btnEdit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="15"
+        android:id="@+id/SPI_editLocation"
+        android:layout_above="@+id/SPI_webViewMap"
+        android:layout_alignLeft="@+id/SPI_webViewMap"
+        android:layout_alignStart="@+id/SPI_webViewMap" />
+
+</RelativeLayout>
