@@ -105,20 +105,14 @@ public class DBManager
     // create or update a user.
     public void createUser(String name, String userId)
     {
-        try {
-            //db = dbHelper.getWritableDatabase();
-            db = dbHelper.getReadableDatabase();
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
 
+        db = dbHelper.getWritableDatabase();
         // Define a projection that specifies which columns from the database
         String[] columns = { DatabaseContract.UserTable.COLUMN_NAME_USERNAME, };
 
         Cursor c = queryDatabase(DatabaseContract.UserTable.TABLE_NAME, columns, null, null,
                 null, null, null);
+
         // check for the existence, if exists, update the user name
         if( c != null && c.moveToFirst() )
         {
