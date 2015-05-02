@@ -33,7 +33,7 @@ public class DatabaseContract
         public static final String COLUMN_NAME_FOOTBALL = "football";
         public static final String COLUMN_NAME_BASEBALL = "baseball";
         public static final String COLUMN_NAME_PINGPONG = "pingpong";
-        public static final String COLUMN_NAME_SNOOKER = "snooker";
+        //public static final String COLUMN_NAME_SNOOKER = "snooker";
 
         public static final String CREATE_TABLE = "CREATE TABLE " +
                 TABLE_NAME + " (" +
@@ -48,8 +48,8 @@ public class DatabaseContract
                 COLUMN_NAME_SOCCER + TEXT_TYPE + COMMA_SEP +
                 COLUMN_NAME_FOOTBALL + TEXT_TYPE + COMMA_SEP +
                 COLUMN_NAME_BASEBALL + TEXT_TYPE + COMMA_SEP +
-                COLUMN_NAME_PINGPONG + TEXT_TYPE + COMMA_SEP +
-                COLUMN_NAME_SNOOKER + TEXT_TYPE +");";
+                COLUMN_NAME_PINGPONG + TEXT_TYPE + COMMA_SEP +");";
+                //COLUMN_NAME_SNOOKER + TEXT_TYPE +");";
 
         public static final String DELETE_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
     }
