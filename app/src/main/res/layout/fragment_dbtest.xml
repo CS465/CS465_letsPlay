@@ -5,8 +5,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="test Layout"
-        android:id="@+id/T_title"
+        android:text="Result"
+        android:id="@+id/T_result"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="87dp" />
@@ -16,7 +16,40 @@
         android:layout_height="wrap_content"
         android:text="submit"
         android:id="@+id/T_btnSubmit"
+        android:layout_marginBottom="91dp"
         android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/T_editId"
+        android:layout_alignStart="@+id/T_editId" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text=""
+        android:ems="10"
+        android:hint="UserName"
+        android:id="@+id/T_editName"
+        android:layout_below="@+id/T_result"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="94dp" />
+        android:layout_marginTop="61dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/T_editId"
+        android:hint="userID"
+        android:ems="10"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/T_editName"
+        android:layout_alignStart="@+id/T_editName" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:id="@+id/T_btnShow"
+        android:layout_alignTop="@+id/T_btnSubmit"
+        android:layout_toRightOf="@+id/T_result"
+        android:layout_toEndOf="@+id/T_result" />
 </RelativeLayout>
