@@ -2,21 +2,235 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Setting Favorite Sport"
-        android:id="@+id/SFS_txtTitle"
-        android:layout_marginTop="52dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
 
-    <Button
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set"
-        android:id="@+id/SFS_btnSet"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/SFS_linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="49dp" />
+        android:layout_marginTop="15dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:id="@+id/gridLayout">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_imgSoccer_u"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:src="@mipmap/soccer_u"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_imgSoccer"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:src="@mipmap/soccer"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_volleyball_u"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:src="@mipmap/volleyball_u"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_volleyball"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:src="@mipmap/volleyball"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_gym_u"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:src="@mipmap/gym_u"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_gym"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:src="@mipmap/gym"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_tennis_u"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:src="@mipmap/tennis_u"
+            android:layout_margin="10dp"
+
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_tennis"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:src="@mipmap/tennis"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_football_u"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:src="@mipmap/football_u"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_football"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:src="@mipmap/football"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_basketball_u"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:src="@mipmap/basketball_u"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_basketball"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:src="@mipmap/basketball"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_pool_u"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:src="@mipmap/pool_u"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_pool"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:src="@mipmap/pool"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_pingpeng_u"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:src="@mipmap/pingpeng_u"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_pingpeng"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:src="@mipmap/pingpeng"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_golf_u"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:src="@mipmap/golf_u"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/SFS_golf"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:src="@mipmap/golf"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            />
+
+
+
+    </GridLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="#FF0000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/SFS_linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favorite Sport"
+            android:id="@+id/SFS_txtTitle"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:textColor="#ffff"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="30dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/SFS_imgSubmit"
+        android:src="@mipmap/submit"
+        android:layout_below="@+id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"/>
 </RelativeLayout>
