@@ -180,5 +180,154 @@
         </LinearLayout>
     </HorizontalScrollView>
 
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/horizontalScrollView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:padding="6dip" >
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="6dip"
+                android:contentDescription="TODO"
+                android:src="@mipmap/football_c" />
+
+            <TextView
+                android:id="@+id/secondLine"
+                android:layout_width="fill_parent"
+                android:layout_height="26dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/icon"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="    ARC Center                                 May 13 2015  "
+                android:textColor="#FE2E2E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/firstLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/secondLine"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toRightOf="@id/icon"
+                android:gravity="center_vertical"
+                android:text="  Football Event"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:padding="6dip" >
+
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="6dip"
+                android:contentDescription="TODO"
+                android:src="@mipmap/soccer_c" />
+
+            <TextView
+                android:id="@+id/secondLine1"
+                android:layout_width="fill_parent"
+                android:layout_height="26dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/icon1"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="     ARC Center                                 May 3 2015  "
+                android:textColor="#FE2E2E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/firstLine1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/secondLine1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toRightOf="@id/icon1"
+                android:gravity="center_vertical"
+                android:text="  Soccer Event"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:padding="6dip" >
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="6dip"
+                android:contentDescription="TODO"
+                android:src="@mipmap/golf_c" />
+
+            <TextView
+                android:id="@+id/secondLine2"
+                android:layout_width="fill_parent"
+                android:layout_height="26dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/icon2"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="  Golf Club                                    April 17 2015  "
+                android:textColor="#FE2E2E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/firstLine2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/secondLine2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toRightOf="@id/icon2"
+                android:gravity="center_vertical"
+                android:text="  Golf Event"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontalScrollView"
+            android:id="@+id/P_listview"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    -->
 </RelativeLayout>
 

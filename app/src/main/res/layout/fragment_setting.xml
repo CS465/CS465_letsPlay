@@ -1,40 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/SET_linearLayout"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#D00043"
+        >
+
+        <TextView
+            android:id="@+id/SET_txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Setting"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffff"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25dp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/SET_btnPersonalInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Setting"
-        android:id="@+id/ST_txtTitle"
-        android:layout_marginTop="49dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:text="             Personal Info"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button"
+        />
 
-    <ImageView
+    <Button
+        android:id="@+id/SET_btnSport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/SET_imgPersonalInfo"
-        android:layout_below="@+id/ST_txtTitle"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="61dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:text="             Favourite Sport"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button"
+        />
 
-    <ImageView
+    <Button
+        android:id="@+id/SET_btnAvailableTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/SET_imgSport"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/ic_launcher"/>
+        android:text="             Available Time"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:textAllCaps="false"
+        android:background="@drawable/custom_button"
+        />
 
-    <ImageView
+ <!--   <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/SET_imgTime"
-        android:layout_below="@+id/SET_imgSport"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
-        android:src="@mipmap/ic_launcher"/>
-</RelativeLayout>
+        android:id="@+id/SET_imageView"
+        android:src="@mipmap/"
+
+        android:layout_gravity="center_horizontal"
+        android:background=""/>-->
+
+</LinearLayout>
 

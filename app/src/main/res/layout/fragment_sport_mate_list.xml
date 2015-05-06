@@ -1,14 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#0101DF">
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sport mate List"
-        android:id="@+id/SML_title"
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="92dp" />
+        android:background="#FF0000"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sportmate List"
+            android:id="@+id/SPL_title"
+            android:textColor="#ffff"
+            android:textSize="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:padding="6dip" >
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="6dip"
+                android:contentDescription="TODO"
+                android:src="@mipmap/supperman_icon" />
+
+            <TextView
+                android:id="@+id/secondLine"
+                android:layout_width="fill_parent"
+                android:layout_height="26dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/icon"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="                                                            Game counts: 40  "
+                android:textColor="#FE2E2E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/firstLine"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/secondLine"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toRightOf="@id/icon"
+                android:gravity="center_vertical"
+                android:text="  Superman"
+                android:textColor="#fff"
+                android:background="#000"
+                android:textSize="18sp"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:padding="6dip" >
+
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="6dip"
+                android:contentDescription="TODO"
+                android:src="@mipmap/batman_icon" />
+
+            <TextView
+                android:id="@+id/secondLine1"
+                android:layout_width="fill_parent"
+                android:layout_height="26dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/icon1"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="                                                            Game counts: 12  "
+                android:textColor="#FE2E2E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/firstLine1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/secondLine1"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toRightOf="@id/icon1"
+                android:gravity="center_vertical"
+                android:text="  Batman"
+                android:textColor="#fff"
+                android:background="#000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="?android:attr/listPreferredItemHeight"
+            android:padding="6dip" >
+
+            <ImageView
+                android:id="@+id/icon2"
+                android:layout_width="70dp"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="6dip"
+                android:contentDescription="TODO"
+                android:src="@mipmap/green_arrow_icon" />
+
+            <TextView
+                android:id="@+id/secondLine2"
+                android:layout_width="fill_parent"
+                android:layout_height="26dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/icon2"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="                                                            Game counts: 9 "
+                android:textColor="#FE2E2E"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/firstLine2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/secondLine2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_toRightOf="@id/icon2"
+                android:gravity="center_vertical"
+                android:text="  Green arrows"
+                android:textColor="#fff"
+                android:background="#000"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+        </LinearLayout>
+
+
 </RelativeLayout>

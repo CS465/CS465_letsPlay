@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#FF0000">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="sport mate finder"
-        android:id="@+id/SMF_title"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp" />
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/SMF_linearLayout"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#D00043"
+        >
+
+        <TextView
+            android:id="@+id/SMF_txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SportMate Finder"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffff"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <!--MAP-->
+        <WebView
+            android:id="@+id/SMF_webViewMap"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            />
+        <Button
+            android:id="@+id/SMF_btnMessage"
+            android:layout_width="100dp"
+            android:layout_height   ="30dp"
+            android:text="      Message"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_button"
+            android:textAllCaps="false"
+            />
+    </LinearLayout>
+</LinearLayout>

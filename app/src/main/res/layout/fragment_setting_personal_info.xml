@@ -1,106 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        android:id="@+id/SPI_txtName"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="41dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="43dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/SPI_editName"
-        android:hint="Your name"
-        android:layout_below="@+id/SPI_txtName"
-        android:layout_alignLeft="@+id/SPI_txtName"
-        android:layout_alignStart="@+id/SPI_txtName" />
+<LinearLayout
+        android:id="@+id/SPI_linearLayout"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="#D00043"
+        >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Age"
-        android:id="@+id/SPI_txtAge"
-        android:layout_below="@+id/SPI_editName"
-        android:layout_alignLeft="@+id/SPI_editName"
-        android:layout_alignStart="@+id/SPI_editName"
-        android:layout_marginTop="49dp" />
+        <TextView
+            android:id="@+id/SPI_txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal Info"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffff"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25dp"
+            />
+    </LinearLayout>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="3"
-        android:id="@+id/SPI_editAge"
-        android:layout_below="@+id/SPI_txtAge"
-        android:layout_alignLeft="@+id/SPI_txtAge"
-        android:layout_alignStart="@+id/SPI_txtAge"
-        android:layout_marginTop="55dp" />
+    <LinearLayout
+            android:id="@+id/SPI_linearLayout2"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gender"
-        android:id="@+id/SPI_txtGender"
-        android:layout_alignTop="@+id/SPI_txtAge"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="150sp"/>
+        <!--NAME-->
+        <TextView
+            android:id="@+id/SPI_txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"/>
 
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/SPI_spinnerGender"
-        android:layout_alignTop="@+id/SPI_editAge"
-        android:layout_alignLeft="@+id/SPI_txtGender"
-        android:layout_alignStart="@+id/SPI_txtGender"
-        android:spinnerMode="dropdown"
-        android:dropDownWidth="20sp"
-        android:entries="@array/SPI_gender"
-        android:prompt ="@string/SPI_genderPrompt"/>
+        <EditText
+            android:id="@+id/SPI_editName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Your name"
+            android:textSize="15sp"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Location"
-        android:id="@+id/SPI_txtLocation"
-        android:layout_above="@+id/SPI_editLocation"
-        android:layout_alignLeft="@+id/SPI_editAge"
-        android:layout_alignStart="@+id/SPI_editAge" />
+        <!--AGE-->
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <WebView
-        android:layout_width="300sp"
-        android:layout_height="150sp"
-        android:id="@+id/SPI_webViewMap"
-        android:layout_above="@+id/SPI_btnEdit"
-        android:layout_alignLeft="@+id/SPI_txtLocation"
-        android:layout_alignStart="@+id/SPI_txtLocation" />
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit"
-        android:id="@+id/SPI_btnEdit"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+                <TextView
+                    android:id="@+id/SPI_txtAge"
+                    android:text="Age"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-        android:ems="15"
-        android:id="@+id/SPI_editLocation"
-        android:layout_above="@+id/SPI_webViewMap"
-        android:layout_alignLeft="@+id/SPI_webViewMap"
-        android:layout_alignStart="@+id/SPI_webViewMap" />
+                <EditText
+                    android:id="@+id/SPI_editAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="3"
+                    android:textSize="15sp"/>
 
-</RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/SPI_txtGender"
+                    android:text="Gender"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"/>
+
+                <Spinner
+                    android:entries="@array/SPI_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/SPI_spinnerGender"
+                    android:spinnerMode="dropdown"
+                    android:dropDownWidth="100sp"
+                    android:prompt ="@string/SPI_genderPrompt"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--LOCATION-->
+        <TextView
+            android:id="@+id/SPI_txtLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"/>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/SPI_editLocation"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textSize="15sp"
+                />
+
+            <Button
+                android:id="@+id/SPI_btnSearch"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="     Search"
+                android:background="@drawable/custom_button"
+                android:textAllCaps="false"
+                />
+        </LinearLayout>
+
+        <!--MAP-->
+        <WebView
+            android:id="@+id/SPI_webViewMap"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/SPI_btnEdit"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="   Edit"
+            android:background="@drawable/custom_button"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

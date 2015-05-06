@@ -1,13 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My Event new 1 sport"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp" />
-</RelativeLayout>
+    <LinearLayout
+        android:id="@+id/EN1_linearLayout"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#D00043"
+        >
+
+        <TextView
+            android:id="@+id/EN1_txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sport"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffff"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/EN1_txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Which sport do you want to play ?"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25dp"
+            />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EN1_linearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:id="@+id/gridLayout">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_imgSoccer_u"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:src="@mipmap/soccer_u"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_imgSoccer"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:src="@mipmap/soccer"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_volleyball_u"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:src="@mipmap/volleyball_u"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_volleyball"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:src="@mipmap/volleyball"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_gym_u"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:src="@mipmap/gym_u"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_gym"
+                android:layout_row="2"
+                android:layout_column="2"
+                android:src="@mipmap/gym"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_tennis_u"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:src="@mipmap/tennis_u"
+                android:layout_margin="10dp"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_tennis"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:src="@mipmap/tennis"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_football_u"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:src="@mipmap/football_u"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_football"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:src="@mipmap/football"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_basketball_u"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:src="@mipmap/basketball_u"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_basketball"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:src="@mipmap/basketball"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_pool_u"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:src="@mipmap/pool_u"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_pool"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:src="@mipmap/pool"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_pingpeng_u"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:src="@mipmap/pingpeng_u"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_pingpeng"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:src="@mipmap/pingpeng"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_golf_u"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:src="@mipmap/golf_u"
+                android:layout_margin="10dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/EN1_golf"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:src="@mipmap/golf"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                />
+
+
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/EN1_btnSelect"
+            android:layout_width="100dp"
+            android:layout_height   ="30dp"
+            android:text="      Select"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_button"
+            android:textAllCaps="false"
+            />
+    </LinearLayout>
+</LinearLayout>

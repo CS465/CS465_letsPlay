@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.cs465.letsplay.R;
@@ -16,9 +17,10 @@ import com.cs465.letsplay.R;
  */
 public class FragmentSetting extends Fragment
 {
-    private ImageView imgInfo;
-    private ImageView imgSport;
-    private ImageView imgTime;
+    private Button btnInfo;
+    private Button btnSport;
+    private Button btnTime;
+
     private FragmentManager fManager;
 
     public FragmentSetting()
@@ -30,13 +32,16 @@ public class FragmentSetting extends Fragment
                              Bundle savedInstanceState)
     {
         View v = inflater.inflate(R.layout.fragment_setting, container, false);
-        imgInfo = (ImageView)v.findViewById(R.id.SET_imgPersonalInfo);
-        imgSport = (ImageView)v.findViewById(R.id.SET_imgSport);
-        imgTime = (ImageView)v.findViewById(R.id.SET_imgTime);
+
+        btnInfo = (Button)v.findViewById(R.id.SET_btnPersonalInfo);
+        btnSport = (Button)v.findViewById(R.id.SET_btnSport);
+        btnTime = (Button)v.findViewById(R.id.SET_btnAvailableTime);
+
+
 
         fManager = getActivity().getSupportFragmentManager();
 
-        imgInfo.setOnClickListener(new View.OnClickListener() {
+        btnInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fTransaction  = fManager.beginTransaction();
@@ -47,7 +52,7 @@ public class FragmentSetting extends Fragment
             }
         });
 
-        imgSport.setOnClickListener(new View.OnClickListener() {
+        btnSport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fTransaction  = fManager.beginTransaction();
@@ -58,7 +63,7 @@ public class FragmentSetting extends Fragment
             }
         });
 
-        imgTime.setOnClickListener(new View.OnClickListener() {
+        btnTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fTransaction  = fManager.beginTransaction();
