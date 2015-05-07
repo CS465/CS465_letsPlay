@@ -32,7 +32,7 @@
         android:layout_margin="10dp">
 
         <TextView
-            android:id="@+id/EN4_txtTitle"
+            android:id="@+id/EN4_txtHint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Is there anything you want your SportMate before the game start ?"

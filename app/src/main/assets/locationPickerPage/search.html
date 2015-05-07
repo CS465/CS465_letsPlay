@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+	<title>Google Maps Latitude and Longitude Picker jQuery plugin</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, user-scalable=0"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<!-- Dependencies: JQuery and GMaps API should be loaded first -->
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<!-- CSS and JS for our code -->
+	<link rel="stylesheet" type="text/css" href="css/jquery-gmaps-latlon-picker.css"/>
+	<script src="js/jquery-gmaps-search.js"></script>
+</head>
+<style>
+	.gllpMap	{ width: 350px; height: 400px; }
+</style>
+
+<body>
+<form>
+	<fieldset class="gllpLatlonPicker">
+		<div class="gllpMap">Google Maps</div>
+		<input type="hidden" class="gllpLatitude" value="40.1131"/>
+		<input type="hidden" class="gllpLongitude" value="-88.22634"/>
+		<input type="hidden" class="gllpZoom" value="13"/>
+		<input type="hidden" class="gllpLocationName" size=42/>
+	</fieldset>
+</form>
+
+<!-- FOR ANDROID INTEGRATION -->
+<script>
+	function activityResizeMap() {
+		if ( $('.gllpMap').width() != $(window).width() || $('.gllpMap').height() != $(window).height()) {
+			$('.gllpMap').width($(window).width());
+			$('.gllpMap').height($(window).height());
+		}
+		setTimeout(activityResizeMap, 1000);
+	}
+	
+	function activityInitialize(lat, lng, zoom) {
+		activityResizeMap();
+
+		$('.gllpLatitude').val(lat);
+		$('.gllpLongitude').val(lng);
+		$('.gllpZoom').val(zoom);
+	}
+
+	function activityPerformSearch(searchString) {
+		var searchObject = {
+			'string' : searchString
+		};
+		$(document).trigger("gllp_perform_search", searchObject);
+	}
+
+	function activityAddMarker(lat,lng,title,desc) {
+		var marker = {
+			'lat' : lat,
+			'lng' : lng,
+			'title' : title,
+			'desc' : desc
+		};
+		$(document).trigger("gllp_add_marker", marker);
+	}
+
+	
+	function activityPerformZoom(zoomValue) {
+		var zoom = $(".gllpZoom").val();
+		zoom = zoom*1 + zoomValue;
+		$(".gllpZoom").val( zoom < 0 ? 0 : zoom );
+		$(document).trigger("gllp_update_fields", zoom);
+	}
+
+	$(document).bind("location_changed", function(event, object) {
+		//sendDataBackToAndroid(object);
+		setTimeout( function() { sendDataBackToAndroid(object); }, 1000);
+	});
+	
+	function sendDataBackToAndroid(object) {
+		var lat  = $('#' + $(object).attr('id') + ' .gllpLatitude').val();
+		var lng  = $('#' + $(object).attr('id') + ' .gllpLongitude').val();
+		var zoom = $('#' + $(object).attr('id') + ' .gllpZoom').val();
+		var loc  = $('#' + $(object).attr('id') + ' .gllpLocationName').val();
+	    AndroidFunction.getValues(lat, lng, zoom, loc);
+	}
+</script>
+<button onclick="javasscript:activityAddMarker(40.1231,-88.23634,'Shivam','BasketBall, Cricket');">TES</button>
+<button onclick="javasscript:activityAddMarker(40.1131,-88.21334,'Ashu','Gym, BasketBall');">TES</button>
+<button onclick="javasscript:activityAddMarker(40.1331,-88.22634,'Piyush','Cricket, Soccer');">TES</button>
+<button onclick="javasscript:activityAddMarker(40.0931,-88.20634,'Hakim','Badminton, Soccer');">TES</button>
+<button onclick="javasscript:activityAddMarker(40.0931,-88.23434,'Shivam','BasketBall, Cricket');">TES</button>
+
+<!-- ^^^ -->
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, user-scalable=0"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<!-- Dependencies: JQuery and ion slider -->
+	<script src="./js/jquery-1.7.2.min.js"></script>
+	<script src="./js/ion.rangeSlider.min.js"></script>
+	<script src="./js/jquery.mobile-1.4.5.min.js"></script>	
+
+	<!-- CSS and JS for our code -->
+    <link rel="stylesheet" type="text/css" href="./css/ion.rangeSlider.css" />
+    <link rel="stylesheet" type="text/css" href="./css/ion.rangeSlider.skinHTML5.css" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.mobile-1.4.5.min.css" />
+	<style>
+		h2 {
+			font-size:1.2em;
+			font-weight: bold;
+		}
+		.style1 {
+			float:right; 
+			padding-top:20px;
+		}
+		.style2 {
+			float:clear;
+			padding-top:40px;
+		}
+		
+	</style>
+
+	
+</head>
+<body>
+   <div style="padding:20px;">
+		<div class="style1">
+			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</div>
+		<div class="style2">  
+            <label><h2>Sunday</h2></label>           
+            <input id="sunday" name="sunday"/>
+ 
+		</div>
+		<!------------->
+		<div class="style1">
+			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</div>	
+        <div class="style2">  
+            <label><h2>Monday</h2></label>
+            <input id="monday" name="sunday"/>
+        </div>
+		<!------------->	
+		<div class="style1">
+			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</div>		
+        <div class="style2">  
+            <label><h2>Tuesday</h2></label>
+            <input id="tuesday" name="sunday"/>
+        </div>
+		<!------------->
+		<div class="style1">
+			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</div>	
+        <div class="style2">  
+            <label><h2>Wednesday</h2></label>
+            <input id="wednesday" name="sunday"/>
+        </div>
+		<!------------->
+		<div class="style1">
+			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</div>	
+        <div class="style2">  
+            <label><h2>Thursday</h2></label>
+            <input id="thursday" name="sunday"/>
+        </div>
+		<!------------->
+		<div class="style1">
+			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</div>	
+        <div class="style2">  
+            <label><h2>Friday</h2></label>
+            <input id="friday" name="sunday"/>
+        </div>
+
+		<!------------->
+		<div class="style1">
+			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+				<option value="off">Off</option>
+				<option value="on">On</option>
+			</select>
+		</div>	
+        <div class="style2">  
+            <label><h2>Saturday</h2></label>
+            <input id="saturday" name="sunday"/>
+        </div>
+        
+    </div>
+ 
+
+<!-- FOR ANDROID INTEGRATION -->
+<script>
+		var sundayfrom = 6;
+		var sundayto = 14;
+		var mondayfrom = 6;
+		var mondayto = 24;
+		var tuesdayfrom = 6;
+		var tuesdayto = 14;
+		var wednesdayfrom = 6;
+		var wednesdayto = 14;
+		var thursdayfrom = 6;
+		var thursdayto = 18;
+		var fridayfrom = 10;
+		var fridayto = 34;
+		var saturdayfrom = 6;
+		var saturdayto = 14;
+		var mytime = ["00:00 AM","00:30 AM","01:00 AM","01:30 AM","02:00 AM","02:30 AM","03:00 AM","03:30 AM","04:00 AM","04:30 AM","05:00 AM","05:30 AM",
+					  "06:00 AM","06:30 AM","07:00 AM","07:30 AM","08:00 AM","08:30 AM","09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM",	
+					  "00:00 PM","00:30 PM","01:00 PM","01:30 PM","02:00 PM","02:30 PM","03:00 PM","03:30 PM","04:00 PM","04:30 PM","05:00 PM","05:30 PM",
+					  "06:00 PM","06:30 PM","07:00 PM","07:30 PM","08:00 PM","08:30 PM","09:00 PM","09:30 PM","10:00 PM","10:30 PM","11:00 PM","11:30 PM","12:00 PM"]; 
+		var mytime1 = ["00:00 AM","00:30 AM","01:00 AM","01:30 AM","02:00 AM","02:30 AM","03:00 AM","03:30 AM","04:00 AM","04:30 AM","05:00 AM","05:30 AM",
+					  "06:00 AM","06:30 AM","07:00 AM","07:30 AM","08:00 AM","08:30 AM","09:00 AM","09:30 AM","10:00 AM","10:30 AM","11:00 AM","11:30 AM","12:00 AM"]; 
+		var mytime2 = ["00:00 PM","00:30 PM","01:00 PM","01:30 PM","02:00 PM","02:30 PM","03:00 PM","03:30 PM","04:00 PM","04:30 PM","05:00 PM","05:30 PM",
+					  "06:00 PM","06:30 PM","07:00 PM","07:30 PM","08:00 PM","08:30 PM","09:00 PM","09:30 PM","10:00 PM","10:30 PM","11:00 PM","11:30 PM","12:00 PM"]; 
+
+					  
+        $("#sunday").ionRangeSlider({
+            type: "double", min: 0, max: 24, from: sundayfrom, to: sundayto, keyboard: true, 
+			values: mytime, hide_min_max: true,
+            onChange: function(data) {
+            },
+            onFinish: function(data) { 
+				AndroidFunction.getData('sunday', data.from, data.to);
+			}
+        });    
+		
+        $("#monday").ionRangeSlider({
+            type: "double", min: 0, max: 24, from: mondayfrom, to: mondayto, keyboard: true,            
+			values: mytime, hide_min_max: true,
+            onChange: function(data) {
+                },
+            onFinish: function(data) { 
+				AndroidFunction.getData('monday', data.from, data.to);
+            }
+        });    
+        $("#tuesday").ionRangeSlider({
+            type: "double", min: 0, max: 24, from: tuesdayfrom, to: tuesdayto, keyboard: true,            
+			values: mytime, hide_min_max: true,
+			onChange: function(data) {
+                },
+            onFinish: function(data) { 
+				AndroidFunction.getData('tuesday', data.from, data.to);
+            }
+        });    
+        $("#wednesday").ionRangeSlider({
+            type: "double", min: 0, max: 24, from: wednesdayfrom, to: wednesdayto, keyboard: true,            
+            values: mytime, hide_min_max: true,
+			onChange: function(data) {
+                },
+            onFinish: function(data) { 
+            }
+        });    
+        $("#thursday").ionRangeSlider({
+            type: "double", min: 0, max: 24, from: thursdayfrom, to: thursdayto, keyboard: true,            
+            values: mytime, hide_min_max: true,
+			onChange: function(data) {
+                },
+            onFinish: function(data) { 
+            }
+        });    
+        $("#friday").ionRangeSlider({
+            type: "double", min: 0, max: 24, from: fridayfrom, to: fridayto, keyboard: true,            
+            values: mytime, hide_min_max: true,
+			onChange: function(data) {
+                },
+            onFinish: function(data) { 
+            }
+        });    
+        $("#saturday").ionRangeSlider({
+            type: "double", min: 0, max: 24, from: saturdayfrom, to: saturdayto, keyboard: true,            
+            values: mytime, hide_min_max: true,
+			onChange: function(data) {
+                },
+            onFinish: function(data) { 
+            }
+        });    
+
+
+	function setData(day, from ,to) {
+		if (day == 'sunday') {
+			sundayfrom = from;
+			sundayto = to;
+		}
+	}
+
+	$(document).bind("location_changed", function(event, object) {
+		//sendDataBackToAndroid(object);
+		setTimeout( function() { sendDataBackToAndroid(object); }, 1000);
+	});
+	3
+	function sendDataBackToAndroid(day, from, to) {
+		//var lat  = $('#' + $(object).attr('id') + ' .gllpLatitude').val();
+	    //AndroidFunction.getMonday(from, to);
+	}
+</script>
+<!-- ^^^ -->
+
+</body>
+</html>
