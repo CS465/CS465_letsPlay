@@ -19,7 +19,7 @@ import com.cs465.letsplay.R;
 public class FragmentSportMate extends Fragment
 {
     private ViewPager viewPager;
-    //private TabsPagerAdapter mAdapter;
+    private TabsPagerAdapter mAdapter;
     private ActionBar actionBar;
     private View v;
     public FragmentSportMate()

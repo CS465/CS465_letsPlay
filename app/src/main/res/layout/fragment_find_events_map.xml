@@ -2,12 +2,24 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Find Event"
-        android:id="@+id/FEL_txtTitle"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="69dp" />
+    <LinearLayout
+        android:id="@+id/FEM_Linear"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#D00043"
+        >
+
+        <TextView
+            android:id="@+id/FEM_txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Map"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffff"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="25dp"
+            />
+    </LinearLayout>
 </RelativeLayout>

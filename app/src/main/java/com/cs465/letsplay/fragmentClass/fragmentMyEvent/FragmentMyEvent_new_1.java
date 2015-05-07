@@ -31,17 +31,19 @@ public class FragmentMyEvent_new_1 extends Fragment
     {
         View v = inflater.inflate(R.layout.fragment_my_event_new_1_sport, container, false);
         btnNext = (Button)v.findViewById(R.id.EN1_btnSelect);
-        fManager = getChildFragmentManager();
+        fManager = getActivity().getSupportFragmentManager();
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fTransaction  = fManager.beginTransaction();
-                FragmentMyEvent_new_1 fragNew_1 = new FragmentMyEvent_new_1();
-                fTransaction.replace(R.id.mainContent,fragNew_1);
+                FragmentMyEvent_new_2 fragNew_2 = new FragmentMyEvent_new_2();
+                fTransaction.replace(R.id.mainContent,fragNew_2);
+                fTransaction.addToBackStack(null);
                 fTransaction.commit();
             }
         });
+
         return v;
 
     }
