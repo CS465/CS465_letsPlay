@@ -178,7 +178,8 @@ var GMapsLatLonPicker = (function() {
 				position: _self.vars.LATLNG,
 				map: _self.vars.map,
 				title: _self.params.strings.markerText,
-				draggable: true
+				draggable: true,
+				icon: './icon/user.png'
 			});
 
 			// Set position on doubleclick

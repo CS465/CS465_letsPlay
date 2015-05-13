@@ -38,17 +38,25 @@
             android:text="When do you want to play ?"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:textSize="25dp"
+            android:textSize="22dp"
+            android:textStyle="bold"
             />
 
+        <!--MAP-->
+        <WebView
+            android:id="@+id/EN2_webViewMap"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
 
         <Button
             android:id="@+id/EN2_btnSelect"
             android:layout_width="100dp"
-            android:layout_height   ="30dp"
-            android:text="      Select"
+            android:layout_height   ="35dp"
+            android:text="      Next"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/custom_button"
             android:textAllCaps="false"
             />

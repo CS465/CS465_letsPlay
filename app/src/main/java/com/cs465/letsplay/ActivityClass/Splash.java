@@ -23,7 +23,7 @@ public class Splash extends Activity {
             @Override
             public void run() {
                 finish();
-                startActivity(new Intent(Splash.this, MainActivity.class));
+                startActivity(new Intent(Splash.this, LoginActivity.class));
             }
         };
         Timer opening = new Timer();

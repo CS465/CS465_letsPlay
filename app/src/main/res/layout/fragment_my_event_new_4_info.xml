@@ -27,18 +27,22 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
 
         <TextView
             android:id="@+id/EN4_txtHint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Is there anything you want your SportMate before the game start ?"
+            android:text="Is there anything you want your SportMate know before the game start ?"
             android:layout_marginTop="10dp"
             android:fontFamily="sans-serif-medium"
-            android:textSize="25dp"
+            android:textSize="22dp"
+            android:textStyle="bold"
+
             />
 
         <EditText
@@ -46,7 +50,11 @@
             android:layout_height="100dp"
             android:inputType="textMultiLine"
             android:id="@+id/EN4_editText"
-            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:background="@drawable/big_edit"
+            android:hint="i.e. dont forget to bring your shoes"
             />
 
         <LinearLayout
@@ -60,9 +68,12 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="Price"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginTop="5dp"
-                android:textSize="15sp"/>
+
+                />
 
             <EditText
                 android:id="@+id/EN4_editPrice"
@@ -70,21 +81,23 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="5"
-                android:textSize="15sp"
+                android:textSize="20sp"
+                android:background="@drawable/small_button"
+                android:padding="5dp"
                 />
 
         </LinearLayout>
 
 
-        <Button
-            android:id="@+id/EN4_btnCreate"
-            android:layout_width="100dp"
-            android:layout_height   ="30dp"
-            android:text="      Create"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/custom_button"
-            android:textAllCaps="false"
-            />
     </LinearLayout>
+    <Button
+        android:id="@+id/EN4_btnCreate"
+        android:layout_width="100dp"
+        android:layout_height   ="35dp"
+        android:text="      Create"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="false"
+        android:layout_marginBottom="10dp"
+        />
 </LinearLayout>

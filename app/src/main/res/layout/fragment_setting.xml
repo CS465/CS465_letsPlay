@@ -30,33 +30,37 @@
         android:id="@+id/SET_btnPersonalInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="             Personal Info"
+        android:text="          Personal Info"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="60dp"
         android:textAllCaps="false"
         android:background="@drawable/custom_button"
+        android:textSize="18dp"
+
         />
 
     <Button
         android:id="@+id/SET_btnSport"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="             Favourite Sport"
+        android:text="           Favourite Sport"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:textAllCaps="false"
         android:background="@drawable/custom_button"
+        android:textSize="18dp"
         />
 
     <Button
         android:id="@+id/SET_btnAvailableTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="             Available Time"
+        android:text="           Available Time"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
         android:textAllCaps="false"
         android:background="@drawable/custom_button"
+        android:textSize="18dp"
         />
 
  <!--   <ImageView

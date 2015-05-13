@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/buttonsmall_pressed"
+    <item android:drawable="@drawable/custom_edit"
         android:state_pressed="true" />
-    <item android:drawable="@drawable/buttonsmall_focused"
+    <item android:drawable="@drawable/custom_edit"
         android:state_focused="true" />
-    <item android:drawable="@drawable/buttonsmall_default" />
+    <item android:drawable="@drawable/custom_edit" />
 
 </selector>

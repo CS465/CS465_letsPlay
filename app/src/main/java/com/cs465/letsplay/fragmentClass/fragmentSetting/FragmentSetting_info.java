@@ -3,6 +3,8 @@ package com.cs465.letsplay.fragmentClass.fragmentSetting;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs465.letsplay.R;
+import com.cs465.letsplay.fragmentClass.fragmentProfile.FragmentProfile;
 
 /**
  * Created by kevin on 4/28/2015.
@@ -27,8 +30,9 @@ public class FragmentSetting_info extends Fragment
     private EditText editAge;
     private EditText editLocation;
     private Spinner spinnerGender;
-    private Button btnEdit;
+    private Button btnSave;
     private Button btnSearch;
+    private FragmentManager fManager;
 
     private WebView webViewMap ;
 
@@ -52,16 +56,27 @@ public class FragmentSetting_info extends Fragment
         editName = (EditText)v.findViewById(R.id.SPI_editName);
         editAge = (EditText)v.findViewById(R.id.SPI_editAge);
         spinnerGender = (Spinner)v.findViewById(R.id.SPI_spinnerGender);
-        btnEdit = (Button)v.findViewById(R.id.SPI_btnEdit);
+        btnSave = (Button)v.findViewById(R.id.SPI_btnSave);
+        fManager = getActivity().getSupportFragmentManager();
         //webViewMap = (WebView)v.findViewById(R.id.SPI_webViewMap);
 
 
-        btnEdit.setOnClickListener(new View.OnClickListener() {
+        btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                //todo logic here
-
+                if(validateRule())
+                {
+                    FragmentTransaction fTransaction = fManager.beginTransaction();
+                    FragmentSetting fragmentSetting = new FragmentSetting();
+                    fTransaction.replace(R.id.mainContent, fragmentSetting);
+                    fTransaction.addToBackStack(null);
+                    fTransaction.commit();
+                }
+                else
+                {
+                    Toast.makeText(getActivity(), "Please check your input.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -107,7 +122,15 @@ public class FragmentSetting_info extends Fragment
         return v;
     }
 
-
+    public Boolean validateRule()
+    {
+        if(editName.getText().toString().isEmpty()||editAge.getText().toString().isEmpty()||editLocation.getText().toString().isEmpty())
+        {
+            return false;
+        }
+        else
+            return true;
+    }
     public class LocationPickerJSInterface {
         @JavascriptInterface
         public void getValues(String latitude, String longitude, String zoom, String locationName){

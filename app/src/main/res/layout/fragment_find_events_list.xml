@@ -247,6 +247,14 @@
 
         </RelativeLayout>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:src="@mipmap/dots_2_1"/>
+
     </LinearLayout>
 
 </RelativeLayout>

@@ -298,7 +298,7 @@
                 android:layout_toRightOf="@id/icon2"
                 android:ellipsize="marquee"
                 android:singleLine="true"
-                android:text="  Golf Club                                    April 17 2015  "
+                android:text="    Golf Club                                    April 17 2015  "
                 android:textColor="#FE2E2E"
                 android:textSize="12sp" />
 

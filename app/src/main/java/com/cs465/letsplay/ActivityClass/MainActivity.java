@@ -127,9 +127,6 @@ public class MainActivity extends ActionBarActivity  implements OnItemClickListe
                 fTransaction.replace(R.id.mainContent, new FragmentSetting());
                 fTransaction.commit();
                 break;
-            case 5:
-                fTransaction.replace(R.id.mainContent, new FragmentDBTest());
-                fTransaction.commit();
             default:
                 break;
 

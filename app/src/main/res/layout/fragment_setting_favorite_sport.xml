@@ -205,9 +205,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_height="60dp"
         android:layout_gravity="center"
-        android:background="#FF0000"
+        android:background="#D00043"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -219,18 +219,24 @@
             android:text="Favorite Sport"
             android:id="@+id/SFS_txtTitle"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="10dp"
             android:textColor="#ffff"
             android:fontFamily="sans-serif-medium"
-            android:textSize="30dp"/>
+            android:textSize="25dp"/>
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/SFS_imgSubmit"
-        android:src="@mipmap/submit"
+    <Button
+        android:id="@+id/SFS_btnSave"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:text="   Save"
+        android:background="@drawable/custom_button"
+        android:textAllCaps="false"
         android:layout_below="@+id/gridLayout"
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_margin="15dp"/>
+
+        />
+
 </RelativeLayout>

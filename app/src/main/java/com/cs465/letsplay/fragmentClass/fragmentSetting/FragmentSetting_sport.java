@@ -2,11 +2,14 @@ package com.cs465.letsplay.fragmentClass.fragmentSetting;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.cs465.letsplay.R;
 
@@ -15,7 +18,10 @@ import com.cs465.letsplay.R;
  */
 public class FragmentSetting_sport extends Fragment
 {
-    private ImageView imgSubmit;
+    //private ImageView imgSubmit;
+    private Button btnSave;
+    private FragmentManager fManager;
+    private int counts;
 
     private ImageView imgSoccer;
     private ImageView imgFootball;
@@ -54,7 +60,8 @@ public class FragmentSetting_sport extends Fragment
 
     public void addComponents(View v)
     {
-        imgSubmit = (ImageView)v.findViewById(R.id.SFS_imgSubmit);
+        btnSave = (Button)v.findViewById(R.id.SFS_btnSave);
+        fManager = getActivity().getSupportFragmentManager();
         imgSoccer = (ImageView)v.findViewById(R.id.SFS_imgSoccer);
         imgFootball= (ImageView)v.findViewById(R.id.SFS_football);
         imgGolf = (ImageView)v.findViewById(R.id.SFS_golf);
@@ -71,6 +78,7 @@ public class FragmentSetting_sport extends Fragment
             {
                 imgSoccer_u.setVisibility(View.VISIBLE);
                 imgSoccer.setVisibility(View.GONE);
+                counts--;
             }
         });
         imgFootball.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +86,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgFootball_u.setVisibility(View.VISIBLE);
                 imgFootball.setVisibility(View.GONE);
+                counts--;
             }
         });
         imgGolf.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +94,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgGolf_u.setVisibility(View.VISIBLE);
                 imgGolf.setVisibility(View.GONE);
+                counts--;
             }
         });
         imgPool.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +102,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgPool_u.setVisibility(View.VISIBLE);
                 imgPool.setVisibility(View.GONE);
+                counts--;
             }
         });
         imgVolleyball.setOnClickListener(new View.OnClickListener() {
@@ -99,6 +110,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgVolleyball_u.setVisibility(View.VISIBLE);
                 imgVolleyball.setVisibility(View.GONE);
+                counts--;
             }
         });
         imgBasketball.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +118,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgBasketball_u.setVisibility(View.VISIBLE);
                 imgBasketball.setVisibility(View.GONE);
+                counts--;
             }
         });
         imgTennis.setOnClickListener(new View.OnClickListener() {
@@ -113,6 +126,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgTennis_u.setVisibility(View.VISIBLE);
                 imgTennis.setVisibility(View.GONE);
+                counts--;
             }
         });
         imgPingpang.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +134,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgPingpang_u.setVisibility(View.VISIBLE);
                 imgPingpang.setVisibility(View.GONE);
+                counts--;
             }
         });
         imgGym.setOnClickListener(new View.OnClickListener() {
@@ -127,6 +142,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgGym_u.setVisibility(View.VISIBLE);
                 imgGym.setVisibility(View.GONE);
+                counts--;
             }
         });
 
@@ -151,6 +167,7 @@ public class FragmentSetting_sport extends Fragment
             {
                 imgSoccer.setVisibility(View.VISIBLE);
                 imgSoccer_u.setVisibility(View.GONE);
+                counts++;
             }
         });
         imgFootball_u.setOnClickListener(new View.OnClickListener() {
@@ -158,6 +175,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgFootball.setVisibility(View.VISIBLE);
                 imgFootball_u.setVisibility(View.GONE);
+                counts++;
             }
         });
         imgGolf_u.setOnClickListener(new View.OnClickListener() {
@@ -165,6 +183,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgGolf.setVisibility(View.VISIBLE);
                 imgGolf_u.setVisibility(View.GONE);
+                counts++;
             }
         });
         imgPool_u.setOnClickListener(new View.OnClickListener() {
@@ -172,6 +191,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgPool.setVisibility(View.VISIBLE);
                 imgPool_u.setVisibility(View.GONE);
+                counts++;
             }
         });
         imgVolleyball_u.setOnClickListener(new View.OnClickListener() {
@@ -179,6 +199,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgVolleyball.setVisibility(View.VISIBLE);
                 imgVolleyball_u.setVisibility(View.GONE);
+                counts++;
             }
         });
         imgBasketball_u.setOnClickListener(new View.OnClickListener() {
@@ -186,6 +207,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgBasketball.setVisibility(View.VISIBLE);
                 imgBasketball_u.setVisibility(View.GONE);
+                counts++;
             }
         });
         imgTennis_u.setOnClickListener(new View.OnClickListener() {
@@ -193,6 +215,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgTennis.setVisibility(View.VISIBLE);
                 imgTennis_u.setVisibility(View.GONE);
+                counts++;
             }
         });
         imgPingpang_u.setOnClickListener(new View.OnClickListener() {
@@ -200,6 +223,7 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgPingpang.setVisibility(View.VISIBLE);
                 imgPingpang_u.setVisibility(View.GONE);
+                counts++;
             }
         });
         imgGym_u.setOnClickListener(new View.OnClickListener() {
@@ -207,18 +231,40 @@ public class FragmentSetting_sport extends Fragment
             public void onClick(View v) {
                 imgGym.setVisibility(View.VISIBLE);
                 imgGym_u.setVisibility(View.GONE);
+                counts++;
             }
         });
 
 
 
-        imgSubmit.setOnClickListener(new View.OnClickListener() {
+        btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                //todo the db call here
+                if (validateRule())
+                {
+                    FragmentTransaction fTransaction = fManager.beginTransaction();
+                    FragmentSetting fragmentSetting = new FragmentSetting();
+                    fTransaction.replace(R.id.mainContent, fragmentSetting);
+                    fTransaction.addToBackStack(null);
+                    fTransaction.commit();
+                }
+                else
+                {
+                    Toast.makeText(getActivity(), "Please select your favorite sport.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
+    }
+
+    public Boolean validateRule()
+    {
+        if(counts<1)
+        {
+            return false;
+        }
+        else
+            return true;
     }
 }

@@ -80,7 +80,7 @@ public class DatabaseContract
         public static final String TABLE_NAME = "sports";
         public static final String COLUMN_NAME_SPORTSNAME = "sportsName";
         public static final String COLUMN_NAME_SPORTSID = "sportsId";
-        public static final int COLUMN_NAME_SPORTSTYPE = 0; // 0 is Outdoor, 1 is indoor
+        public static final String COLUMN_NAME_SPORTSTYPE = "sportType"; // 0 is Outdoor, 1 is indoor
 
         public static final String CREATE_TABLE = "CREATE TABLE " +
                 TABLE_NAME + " (" +

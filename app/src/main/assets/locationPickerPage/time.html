@@ -46,7 +46,7 @@
 		</div>
 		<!------------->
 		<div class="style1">
-			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+			<select id="flip-2" name="flip-2" data-role="slider" data-mini="true">
 				<option value="off">Off</option>
 				<option value="on">On</option>
 			</select>
@@ -57,7 +57,7 @@
         </div>
 		<!------------->	
 		<div class="style1">
-			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+			<select id="flip-3" name="flip-3" data-role="slider" data-mini="true">
 				<option value="off">Off</option>
 				<option value="on">On</option>
 			</select>
@@ -68,7 +68,7 @@
         </div>
 		<!------------->
 		<div class="style1">
-			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+			<select id="flip-4" name="flip-4" data-role="slider" data-mini="true">
 				<option value="off">Off</option>
 				<option value="on">On</option>
 			</select>
@@ -79,7 +79,7 @@
         </div>
 		<!------------->
 		<div class="style1">
-			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+			<select id="flip-5" name="flip-5" data-role="slider" data-mini="true">
 				<option value="off">Off</option>
 				<option value="on">On</option>
 			</select>
@@ -90,7 +90,7 @@
         </div>
 		<!------------->
 		<div class="style1">
-			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+			<select id="flip-6" name="flip-6" data-role="slider" data-mini="true">
 				<option value="off">Off</option>
 				<option value="on">On</option>
 			</select>
@@ -102,7 +102,7 @@
 
 		<!------------->
 		<div class="style1">
-			<select id="flip-1" name="flip-1" data-role="slider" data-mini="true">
+			<select id="flip-7" name="flip-7" data-role="slider" data-mini="true">
 				<option value="off">Off</option>
 				<option value="on">On</option>
 			</select>
@@ -195,7 +195,7 @@
         });    
         $("#saturday").ionRangeSlider({
             type: "double", min: 0, max: 24, from: saturdayfrom, to: saturdayto, keyboard: true,            
-            values: mytime, hide_min_max: true,
+            values: mytime, hide_min_max: true, 
 			onChange: function(data) {
                 },
             onFinish: function(data) { 
@@ -219,6 +219,126 @@
 		//var lat  = $('#' + $(object).attr('id') + ' .gllpLatitude').val();
 	    //AndroidFunction.getMonday(from, to);
 	}
+	
+	$( "#flip-1" ).change(function() {
+		var slider = $("#sunday").data("ionRangeSlider");
+			
+		if ($( "#flip-1" ).val() == "off") {
+			slider.update({
+				disable: true
+			});	
+		}
+		if ($( "#flip-1" ).val() == "on") {
+			slider.update({
+				disable: false
+			});		
+		}
+	});
+
+	$( "#flip-2" ).change(function() {
+		var slider = $("#monday").data("ionRangeSlider");
+			
+		if ($( "#flip-2" ).val() == "off") {
+			slider.update({
+				disable: true
+			});	
+		}
+		if ($( "#flip-2" ).val() == "on") {
+			slider.update({
+				disable: false
+			});		
+		}
+	});
+	$( "#flip-3" ).change(function() {
+		var slider = $("#tuesday").data("ionRangeSlider");
+			
+		if ($( "#flip-3" ).val() == "off") {
+			slider.update({
+				disable: true
+			});	
+		}
+		if ($( "#flip-3" ).val() == "on") {
+			slider.update({
+				disable: false
+			});		
+		}
+	});
+	$( "#flip-4" ).change(function() {
+		var slider = $("#wednesday").data("ionRangeSlider");
+			
+		if ($( "#flip-4" ).val() == "off") {
+			slider.update({
+				disable: true
+			});	
+		}
+		if ($( "#flip-4" ).val() == "on") {
+			slider.update({
+				disable: false
+			});		
+		}
+	});
+	$( "#flip-5" ).change(function() {
+		var slider = $("#thursday").data("ionRangeSlider");
+			
+		if ($( "#flip-5" ).val() == "off") {
+			slider.update({
+				disable: true
+			});	
+		}
+		if ($( "#flip-5" ).val() == "on") {
+			slider.update({
+				disable: false
+			});		
+		}
+	});
+	$( "#flip-6" ).change(function() {
+		var slider = $("#friday").data("ionRangeSlider");
+			
+		if ($( "#flip-6" ).val() == "off") {
+			slider.update({
+				disable: true
+			});	
+		}
+		if ($( "#flip-6" ).val() == "on") {
+			slider.update({
+				disable: false
+			});		
+		}
+	});
+	
+	$( "#flip-7" ).change(function() {
+		var slider = $("#saturday").data("ionRangeSlider");
+			
+		if ($( "#flip-7" ).val() == "off") {
+			slider.update({
+				disable: true
+			});	
+		}
+		if ($( "#flip-7" ).val() == "on") {
+			slider.update({
+				disable: false
+			});		
+		}
+	});
+	
+	$(document).ready(function(){
+	
+		var slider1 = $("#sunday").data("ionRangeSlider");
+		var slider2 = $("#monday").data("ionRangeSlider");
+		var slider3 = $("#tuesday").data("ionRangeSlider");
+		var slider4 = $("#wednesday").data("ionRangeSlider");
+		var slider5 = $("#thursday").data("ionRangeSlider");
+		var slider6 = $("#friday").data("ionRangeSlider");
+		var slider7 = $("#saturday").data("ionRangeSlider");
+		slider1.update({ disable: true });	
+		slider2.update({ disable: true });	
+		slider3.update({ disable: true });	
+		slider4.update({ disable: true });	
+		slider5.update({ disable: true });	
+		slider6.update({ disable: true });	
+		slider7.update({ disable: true });	
+		
+    });
 </script>
 <!-- ^^^ -->
 

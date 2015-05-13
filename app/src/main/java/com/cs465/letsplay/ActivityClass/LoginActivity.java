@@ -1,18 +1,41 @@
 package com.cs465.letsplay.ActivityClass;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.cs465.letsplay.R;
 
 public class LoginActivity extends ActionBarActivity {
 
+
+    private EditText editUserName;
+    private ImageView imgStart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        editUserName = (EditText)findViewById(R.id.L_editName);
+        imgStart     = (ImageView)findViewById(R.id.L_imgBtnStart);
+        imgStart.setOnClickListener(new  View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+
+                String userName = editUserName.getText().toString();
+                if(!userName.isEmpty())
+                {
+                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                }
+            }
+        });
+
+
     }
 
 

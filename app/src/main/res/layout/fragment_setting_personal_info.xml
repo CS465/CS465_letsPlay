@@ -44,7 +44,7 @@
             android:text="Name"
             android:textStyle="bold"
             android:layout_marginTop="5dp"
-            android:textSize="15sp"/>
+            android:textSize="16sp"/>
 
         <EditText
             android:id="@+id/SPI_editName"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:hint="Your name"
-            android:textSize="15sp"
+            android:textSize="16sp"
             />
 
         <!--AGE-->
@@ -73,7 +73,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:textSize="15sp"
+                    android:textSize="16sp"
                     />
 
                 <EditText
@@ -82,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="3"
-                    android:textSize="15sp"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 
@@ -98,7 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:textSize="15sp"/>
+                    android:textSize="16sp"/>
 
                 <Spinner
                     android:entries="@array/SPI_gender"
@@ -108,7 +108,7 @@
                     android:spinnerMode="dropdown"
                     android:dropDownWidth="100sp"
                     android:prompt ="@string/SPI_genderPrompt"
-                    android:textSize="15sp"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
         </LinearLayout>
@@ -121,7 +121,7 @@
             android:text="Location"
             android:textStyle="bold"
             android:layout_marginTop="5dp"
-            android:textSize="15sp"/>
+            android:textSize="16sp"/>
 
 
         <LinearLayout
@@ -135,7 +135,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:textSize="15sp"
+                android:textSize="16sp"
                 />
 
             <Button
@@ -157,10 +157,10 @@
             />
 
         <Button
-            android:id="@+id/SPI_btnEdit"
-            android:layout_width="80dp"
-            android:layout_height="30dp"
-            android:text="   Edit"
+            android:id="@+id/SPI_btnSave"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:text="   Save"
             android:background="@drawable/custom_button"
             android:textAllCaps="false"
             android:layout_marginTop="5dp"
