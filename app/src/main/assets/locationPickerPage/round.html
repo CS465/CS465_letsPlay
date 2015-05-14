@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <title></title>
+
+    <script src="./js/d3.min.js"></script>
+    <script src="./js/moment.min.js"></script>
+    <script src="./js/angular.min.js"></script>
+    <script src="./js/angular-moment.min.js"></script>
+    
+    <script src="./js/timepicker.directive.js"></script>
+    <link rel="stylesheet" href="./css/timepicker.css">
+	
+	
+    
+	<link rel="stylesheet" href="./css/jquery-ui.css">
+    <script src="./js/jquery-1.7.2.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+
+	<style>
+		.style1 {
+			font-weight: bold;
+			font-family: Myriad, "Helvetic Neue", Helvetica, Arial;
+			font-size: 20px;
+		}
+		input {
+			font-family: Myriad, "Helvetic Neue", Helvetica, Arial;
+			font-size: 20px;
+			border-radius: 4px;
+			border-style:groove;
+            background-color: #f5f4f4;
+		}
+	</style>
+</head>
+<body ng-controller="TimepickerDemoCtrl" >
+	<div class="style1">
+	
+	<table >
+		<tr >
+			<td colspan="2">
+				Date:<br>
+				<input type="text" disabled id="datepicker" size="15" ng-model="mydate" ng-change="tes()" >
+		
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>
+				From:<br>
+				<input type="text" disabled id="timefrom" size="5" ng-model="myfrom">
+				<img src="./icon/clock.png" width="20px" ng-click="selectTime1()">&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			</td>
+			<td>
+				To:<br>
+				<input type="text" disabled id="timeto" size="5" ng-model="myto"">
+				<img src="./icon/clock.png" width="20px" ng-click="selectTime2()">
+
+
+			</td>
+		</tr>	
+	</table>
+		</div>
+	
+
+    
+	<div id="fromDlg" title="From:">
+		<ui-timepicker ng-model="mydatetime"></ui-timepicker>
+	</div>
+	<div id="toDlg" title="To:">
+		<ui-timepicker ng-model="mydatetime"></ui-timepicker>
+	</div>
+
+
+    <script>
+	  $(function() {
+		var scope = angular.element($("#fromDlg")).scope();
+		$( "#datepicker" ).datepicker({
+		  showOn: "button",
+		  buttonImage: "./icon/calendar.png",
+		  buttonImageOnly: true,
+		  buttonText: "Select date",
+		  dateFormat: "MM d, yy",
+		  onSelect: function() {
+				sendDataBackToAndroid($( "#datepicker" ).val(), scope.myfrom, scope.myto);
+			}
+		});
+	  });
+
+    fromDlg = $( "#fromDlg" ).dialog({
+      autoOpen: false
+    });
+    toDlg = $( "#toDlg" ).dialog({
+      autoOpen: false
+    });
+		
+	
+        var app = angular.module("myapp", ["ui.timepicker"]);
+
+        app.controller("TimepickerDemoCtrl", ["$scope", function ($scope) {
+            $scope.mydatetime = new Date();
+            $scope.mydate = moment($scope.mydatetime).format("MMM d, YYYY");;
+			$scope.myfrom = moment($scope.mydatetime).format("HH:mm");;
+			$scope.myto = moment($scope.mydatetime).format("HH:mm");;
+			
+			$scope.fromDlg = $( "#fromDlg" ).dialog({
+							  autoOpen: false,
+							  buttons: {
+								"Select": function() {
+							        var scope = angular.element($("#fromDlg")).scope();
+				                    scope.$apply(function(){
+										$scope.myfrom = moment($scope.mydatetime).format("HH:mm");
+										sendDataBackToAndroid($scope.mydate, $scope.myfrom, $scope.myto);
+
+									})		
+									$(this).dialog("close");
+								}
+							  }
+							});
+			$scope.toDlg = $( "#toDlg" ).dialog({
+							  autoOpen: false,
+							  buttons: {
+								"Select": function() {
+							        var scope = angular.element($("#toDlg")).scope();
+				                    scope.$apply(function(){
+										$scope.myto = moment($scope.mydatetime).format("HH:mm");
+									    sendDataBackToAndroid($scope.mydate, $scope.myfrom, $scope.myto);
+
+									})		
+									$(this).dialog("close");
+								}
+							  }
+							});
+			
+            $scope.showTime = function () {
+                alert(moment($scope.mydatetime).format("HH:mm"));
+            };
+			
+            $scope.selectTime1 = function () {
+				$scope.fromDlg.dialog("open");
+            };
+            $scope.selectTime2 = function () {
+				$scope.toDlg.dialog("open");
+            };
+
+            $scope.tes = function () {
+                alert('qwe');
+            };
+
+        }]);
+		
+	function activityInitialize(mydate, myfrom, myto) {
+	
+		$('.datepicker').val(mydate);
+		$('.timefrom').val(myfrom);
+		$('.timeto').val(myto);
+	}
+	
+	function sendDataBackToAndroid(mydate, myfrom, myto) {
+		AndroidFunction.getValues(mydate, myfrom, myto);
+	    
+	}
+	
+		
+		
+    </script>
+	
+
+</body>
+</html>
